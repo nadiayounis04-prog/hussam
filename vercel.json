@@ -1,1 +1,37 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "functions": {
+    "app/api/**/*.ts": {
+      "maxDuration": 30
+    }
+  },
+  "git": {
+    "deploymentEnabled": {
+      "main": true,
+      "dev": true
+    }
+  },
+  "headers": [
+    {
+      "source": "/api/health",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": "/api/health"
+    }
+  ]
+
+} 
 
