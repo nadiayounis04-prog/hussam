@@ -1,0 +1,14 @@
+{
+  "name": "hussamallah-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd hussamallah && npm run build",
+    "dev": "cd hussamallah && npm run dev",
+    "start": "cd hussamallah && npm run start",
+    "lint": "cd hussamallah && npm run lint"
+  },
+  "workspaces": [
+    "hussamallah"
+  ]
+}
